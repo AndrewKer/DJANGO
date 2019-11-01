@@ -1,5 +1,5 @@
 # DJANGO
-This is a deo project to explore Django Framework.
+This is a demo project to explore Django Framework.
 https://www.djangoproject.com/
 
 ## Install Python
