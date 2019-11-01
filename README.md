@@ -72,3 +72,15 @@ These files are:
  - **mysite/settings.py**: Settings/configuration for this Django project. Django settings will tell you all about how settings work.
  - **mysite/urls.py**: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
  - **mysite/wsgi.py**: An entry-point for WSGI-compatible web servers to serve your project.
+
+## The development server
+Let’s verify your Django project works. Change into the outer **mysite** directory, if you haven’t already, and run the following commands:
+```
+  py manage.py runserver
+```
+
+You’ve started the Django development server, a lightweight Web server written purely in Python. We’ve included this with Django so you can develop things rapidly, without having to deal with configuring a production server – such as Apache – until you’re ready for production.
+
+>**Note:** don’t use this server in anything resembling a production environment. It’s intended only for use while developing.
+
+Now that the server’s running, visit http://127.0.0.1:8000/ with your Web browser. You’ll see a “Congratulations!” page, with a rocket taking off. It worked!
