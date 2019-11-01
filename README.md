@@ -85,3 +85,8 @@ Edit the **mysite/settings.py** file and add that dotted path to the **INSTALLED
 By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
 
 Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk.
+
+The three-step guide to making model changes:
+ - Change your models (in **models.py**).
+ - Run **python manage.py makemigrations** to create migrations for those changes
+ - Run **python manage.py migrate** to apply those changes to the database.
