@@ -13,6 +13,7 @@ Django supports many different database servers and is officially supported with
 In addition to a database backend, you’ll need to make sure your Python database bindings are installed.
 - If you’re using PostgreSQL, you’ll need the psycopg2 package. Refer to the PostgreSQL notes for further details.
 - If you’re using MySQL, you’ll need a DB API driver like mysqlclient. See notes for the MySQL backend for details.
+  `pip install mysqlclient`
 - If you’re using SQLite you might want to read the SQLite backend notes.
 - If you’re using Oracle, you’ll need a copy of cx_Oracle, but please read the notes for the Oracle backend for details regarding supported versions of both Oracle and cx_Oracle.
 - If you’re using an unofficial 3rd party backend, please consult the documentation provided for any additional requirements.
