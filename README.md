@@ -72,3 +72,16 @@ These files are:
  - **mysite/settings.py**: Settings/configuration for this Django project. Django settings will tell you all about how settings work.
  - **mysite/urls.py**: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
  - **mysite/wsgi.py**: An entry-point for WSGI-compatible web servers to serve your project.
+
+## Activating models
+
+To include the app in our project, we need to add a reference to its configuration class in the **INSTALLED_APPS** setting.
+Edit the **mysite/settings.py** file and add that dotted path to the **INSTALLED_APPS** setting.
+
+```
+ python manage.py makemigrations polls
+```
+
+By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
+
+Migrations are how Django stores changes to your models (and thus your database schema) - they’re just files on disk.
