@@ -79,7 +79,7 @@ To include the app in our project, we need to add a reference to its configurati
 Edit the **mysite/settings.py** file and add that dotted path to the **INSTALLED_APPS** setting.
 
 ```
- python manage.py makemigrations polls
+ py manage.py makemigrations polls
 ```
 
 By running makemigrations, you’re telling Django that you’ve made some changes to your models (in this case, you’ve made new ones) and that you’d like the changes to be stored as a migration.
@@ -90,3 +90,26 @@ The three-step guide to making model changes:
  - Change your models (in **models.py**).
  - Run **python manage.py makemigrations** to create migrations for those changes
  - Run **python manage.py migrate** to apply those changes to the database.
+
+## Django Admin
+Django entirely automates creation of admin interfaces for models.
+
+Django was written in a newsroom environment, with a very clear separation between “content publishers” and the “public” site. Site managers use the system to add news stories, events, sports scores, etc., and that content is displayed on the public site. Django solves the problem of creating a unified interface for site administrators to edit content.
+
+**Note:** The admin isn’t intended to be used by site visitors. It’s for site managers.
+
+### Creating an admin user
+```
+ py manage.py createsuperuser
+```
+1. Enter your desired username and press enter.
+2. You will then be prompted for your desired email address.
+3. The final step is to enter your password. You will be asked to enter your password twice, the second time as a confirmation of the first.
+
+### Start the development server
+The Django admin site is activated by default.
+If the server is not running start it like so:
+```
+ py manage.py runserver
+```
+Now, open a Web browser and go to “/admin/” on your local domain – e.g., http://127.0.0.1:8000/admin/.
