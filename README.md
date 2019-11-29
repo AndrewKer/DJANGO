@@ -73,6 +73,12 @@ These files are:
  - **mysite/urls.py**: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
  - **mysite/wsgi.py**: An entry-point for WSGI-compatible web servers to serve your project.
 
+## Creating an app
+Apps need to be built to perform only one task.
+```
+ django-admin startapp myapp
+```
+
 ## Activating models
 
 To include the app in our project, we need to add a reference to its configuration class in the **INSTALLED_APPS** setting.
